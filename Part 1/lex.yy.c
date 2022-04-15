@@ -505,20 +505,16 @@ goto find_rule; \
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "phase1.l"
+#line 1 "part1.l"
 #define INITIAL 0
-#line 2 "phase1.l"
-    #include<stdio.h>
-    #include "phase1.tab.h"
-    #include<string.h>
-#line 24 "phase1.l"
+#line 18 "part1.l"
 #include<stdio.h>
-#include"y.tab.h"
+#include"part1.tab.h"
 #include<string.h>
 extern YYSTYPE yylval;
 int t = 1;
 int n = 0;
-#line 522 "lex.yy.c"
+#line 518 "lex.yy.c"
 
 /* Macros after this point can all be overridden by user definitions in
  * section 1.
@@ -669,9 +665,9 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 32 "phase1.l"
+#line 26 "part1.l"
 
-#line 675 "lex.yy.c"
+#line 671 "lex.yy.c"
 
 	if ( yy_init )
 		{
@@ -777,255 +773,255 @@ do_action:	/* This label is used only to access EOF actions. */
 	{ /* beginning of action switch */
 case 1:
 YY_RULE_SETUP
-#line 33 "phase1.l"
+#line 27 "part1.l"
 {printf("comment ");return COMMENT;} 
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 34 "phase1.l"
+#line 28 "part1.l"
 {printf("comment ");return COMMENT;} 
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 36 "phase1.l"
+#line 30 "part1.l"
 {printf("if ");return IF;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 37 "phase1.l"
+#line 31 "part1.l"
 {printf("else ");return ELSE;}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 38 "phase1.l"
+#line 32 "part1.l"
 {printf("while ");return WHILE;}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 39 "phase1.l"
+#line 33 "part1.l"
 {printf("True ");yylval=strdup(yytext);return T;}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 40 "phase1.l"
+#line 34 "part1.l"
 {printf("False ");yylval=strdup(yytext);return F;}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 41 "phase1.l"
+#line 35 "part1.l"
 {printf("plus ");yylval=strdup(yytext);return PLUS;}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 42 "phase1.l"
+#line 36 "part1.l"
 {printf("minus ");return MINUS;}
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 43 "phase1.l"
+#line 37 "part1.l"
 {printf("mul ");return MUL;}
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 44 "phase1.l"
+#line 38 "part1.l"
 {printf("divide ");return DIVIDE;}
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 45 "phase1.l"
+#line 39 "part1.l"
 {printf("equal ");return EQUAL;}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 46 "phase1.l"
+#line 40 "part1.l"
 {printf("plusequal ");return PLUSEQUAL;}
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 47 "phase1.l"
+#line 41 "part1.l"
 {printf("divideequal ");return DIVIDEEQUAL;}
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 48 "phase1.l"
+#line 42 "part1.l"
 {printf("mulequal ");return MULEQUAL;}
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 49 "phase1.l"
+#line 43 "part1.l"
 {printf("minusequal ");return MINUSEQUAL;}
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 50 "phase1.l"
+#line 44 "part1.l"
 {printf("special_start ");return SPECIAL_START;}
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 51 "phase1.l"
+#line 45 "part1.l"
 {printf("special_end ");return SPECIAL_END;}
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 52 "phase1.l"
+#line 46 "part1.l"
 {printf("\n");return NL;}
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 53 "phase1.l"
+#line 47 "part1.l"
 {printf("or ");return OR;}
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 54 "phase1.l"
+#line 48 "part1.l"
 {printf("and ");return AND;}
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 55 "phase1.l"
+#line 49 "part1.l"
 {printf("not ");return NOT;}
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 56 "phase1.l"
+#line 50 "part1.l"
 {printf("in ");return IN;}
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 57 "phase1.l"
+#line 51 "part1.l"
 {printf("not in ");return NOTIN;}
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 58 "phase1.l"
+#line 52 "part1.l"
 {printf("lessthan ");return LESSTHAN;}
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 59 "phase1.l"
+#line 53 "part1.l"
 {printf("lessthanequal ");return LESSTHANEQUAL;}
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 60 "phase1.l"
+#line 54 "part1.l"
 {printf("greaterthanequal ");return GREATERTHANEQUAL;}
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 61 "phase1.l"
+#line 55 "part1.l"
 {printf("greaterthan ");return GREATERTHAN;}
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 62 "phase1.l"
+#line 56 "part1.l"
 {printf("doubleequal ");return DOUBLEEQUAL;}
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 63 "phase1.l"
+#line 57 "part1.l"
 {printf("notequal ");return NOTEQUAL;}
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 64 "phase1.l"
+#line 58 "part1.l"
 {printf("colon ");return COLON;}
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 65 "phase1.l"
+#line 59 "part1.l"
 {printf("sq bracket start ");return SQUAREBRACKET_START;}
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 66 "phase1.l"
+#line 60 "part1.l"
 {printf("sq bracket end ");return SQUAREBRACKET_END;}
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 67 "phase1.l"
+#line 61 "part1.l"
 {printf("mod ");return MOD;}
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 68 "phase1.l"
+#line 62 "part1.l"
 {printf("sep ");return SEP;}
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 69 "phase1.l"
+#line 63 "part1.l"
 {printf("end" );return END;}
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
-#line 70 "phase1.l"
+#line 64 "part1.l"
 {printf("print ");return PRINT;}
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
-#line 71 "phase1.l"
+#line 65 "part1.l"
 {printf("range ");return RANGE;}
 	YY_BREAK
 case 39:
 YY_RULE_SETUP
-#line 72 "phase1.l"
+#line 66 "part1.l"
 {printf("list ");return LIST;}
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
-#line 73 "phase1.l"
+#line 67 "part1.l"
 {printf("ID ");yylval=strdup(yytext);return ID;}
 	YY_BREAK
 case 41:
 YY_RULE_SETUP
-#line 74 "phase1.l"
+#line 68 "part1.l"
 {printf("string ");yylval=strdup(yytext);return STRING;}
 	YY_BREAK
 case 42:
 YY_RULE_SETUP
-#line 75 "phase1.l"
+#line 69 "part1.l"
 {printf("int ");yylval=strdup(yytext);return INTEGER;}
 	YY_BREAK
 case 43:
 YY_RULE_SETUP
-#line 76 "phase1.l"
+#line 70 "part1.l"
 {printf("num ");yylval=strdup(yytext);return NUM;}
 	YY_BREAK
 case 44:
 YY_RULE_SETUP
-#line 77 "phase1.l"
+#line 71 "part1.l"
 {printf("%s\t",yytext);}
 	YY_BREAK
 case 45:
 YY_RULE_SETUP
-#line 78 "phase1.l"
+#line 72 "part1.l"
 {printf("single quote ");return SINGLEQUOTE;}
 	YY_BREAK
 case 46:
 YY_RULE_SETUP
-#line 79 "phase1.l"
+#line 73 "part1.l"
 {printf("double quote ");return DOUBLEQUOTE;}
 	YY_BREAK
 case 47:
 YY_RULE_SETUP
-#line 80 "phase1.l"
+#line 74 "part1.l"
 {printf("exp ");return EXPONENTIAL;}
 	YY_BREAK
 case 48:
 YY_RULE_SETUP
-#line 81 "phase1.l"
+#line 75 "part1.l"
 {printf("comma ");return COMMA;}
 	YY_BREAK
 case 49:
 YY_RULE_SETUP
-#line 82 "phase1.l"
+#line 76 "part1.l"
 {printf("indent ");return INDENT;}
 	YY_BREAK
 case 50:
 YY_RULE_SETUP
-#line 84 "phase1.l"
+#line 78 "part1.l"
 ECHO;
 	YY_BREAK
-#line 1029 "lex.yy.c"
+#line 1025 "lex.yy.c"
 			case YY_STATE_EOF(INITIAL):
 				yyterminate();
 
@@ -1905,7 +1901,7 @@ int main()
 	return 0;
 	}
 #endif
-#line 84 "phase1.l"
+#line 78 "part1.l"
 
 
 int yywrap() {

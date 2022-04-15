@@ -1,7 +1,10 @@
 %{
-    #include<stdio.h>
-    #include "phase1.tab.h"
-    #include<string.h>
+#include<stdio.h>
+#include "part1.tab.h"
+#include<string.h>
+extern YYSTYPE yylval;
+int t = 1;
+int n = 0;
 %}
 
 digits  [0-9]
@@ -20,14 +23,6 @@ mul	\*
 special_start \(
 special_end   \)
 alpha [a-zA-Z]
-%{
-#include<stdio.h>
-#include"y.tab.h"
-#include<string.h>
-extern YYSTYPE yylval;
-int t = 1;
-int n = 0;
-%}
 
 %%
 #(.*\n) {printf("comment ");return COMMENT;} 
@@ -80,9 +75,6 @@ list {printf("list ");return LIST;}
 \*\* {printf("exp ");return EXPONENTIAL;}
 , {printf("comma ");return COMMA;}
 \t {printf("indent ");return INDENT;}
-
 %%
 
-int yywrap() {
-    return 1;
-}
+yywrap(){}
