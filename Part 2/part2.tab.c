@@ -2421,7 +2421,7 @@ x++;
  
 int main(){
 	 extern FILE* yyin,*yyout;
-	 yyin = fopen("inp.py","r");
+	 yyin = fopen("input.py","r");
 	 yyparse();
 	 
 	 if(!error)
